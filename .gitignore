@@ -1,0 +1,46 @@
+.env
+*.pem
+*bionlog
+db/#innodb_temp/
+db/#ib*
+db/auto.cnf
+db/binlog.index
+db/ibdata1
+db/mysql.ibd
+db/undo*
+db/ib_*
+db/binlog*
+db/performance_schema
+db/mysql
+*.log
+.cache
+.DS_Store
+src/.temp
+node_modules
+dist
+.env.*
+sys/
+
+/.bundle
+
+# Ignore all environment files (except templates).
+/.env*
+!/.env*.erb
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore storage (uploaded files in development and any SQLite databases).
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
