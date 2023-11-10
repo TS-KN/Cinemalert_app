@@ -38,3 +38,19 @@ services:
     depends_on:
       - db
 
+  frontend:
+    # frontendにあるDockerfileをもとにイメージを生成する
+    build:
+      context: ./frontend
+      # .envの環境変数を展開して、WORKDIRという引数を登録し、frontend/Dockerfileに渡す
+      args:
+        WORKDIR: $WORKDIR
+    # frontendディレクトリにあるホストのファイルとコンテナを同期
+    volumes:
+      - "./frontend:/$WORKDIR"
+    # ホストの3000番ポートをコンテナの5173番ポートに繋ぐ
+    ports:
+      - "3000:5173"
+    # backendコンテナ起動後にfrontendコンテナを起動
+    depends_on:
+      - backend
