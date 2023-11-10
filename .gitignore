@@ -8,7 +8,7 @@ db/binlog.index
 db/ibdata1
 db/mysql.ibd
 db/undo*
-db/ib_*
+db/ib*
 db/binlog*
 db/performance_schema
 db/mysql
