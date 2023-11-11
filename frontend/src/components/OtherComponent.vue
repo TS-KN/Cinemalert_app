@@ -3,6 +3,6 @@
 
 <template>
   <v-container>
-    <v-btn>Helloボタン</v-btn>
+    <v-btn>Otherボタン</v-btn>
   </v-container>
 </template>
