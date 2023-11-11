@@ -1,8 +1,9 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <RouterView />
+  <span>Loginページの予定です</span>
 </template>
 
 <style scoped>
