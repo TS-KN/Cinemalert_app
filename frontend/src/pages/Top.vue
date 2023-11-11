@@ -1,8 +1,9 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <RouterView />
+  <span>Topページの予定です</span>
 </template>
 
 <style scoped>
