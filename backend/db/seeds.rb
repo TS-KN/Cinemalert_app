@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+10.times do
+  Item.create(
+    title: Faker::Lorem.words(number: 3).join(' '),
+    description: Faker::Lorem.paragraph,
+    image_url: Faker::LoremFlickr.image(size: "300x200", search_terms: ['nature'])
+  )
+end

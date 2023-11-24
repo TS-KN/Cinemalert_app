@@ -15,6 +15,9 @@ services:
     # .envの環境変数を展開してMYSQLコンテナのパスワードを登録
     environment:
       MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+    # ホストの3306番ポートをコンテナの3306番ポートに繋ぐ
+    ports:
+      - "3306:3306"
 
   backend:
     # ./backendにあるDockerfileをもとにイメージを生成する

@@ -51,4 +51,5 @@ group :development do
   gem 'rubocop-performance', require: false # 拡張機能
   gem 'rubocop-rails', require: false # 拡張機能
   gem 'rubocop-rspec', require: false # 拡張機能
+  gem 'faker'
 end

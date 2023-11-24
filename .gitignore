@@ -34,3 +34,4 @@ sys/
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+!backend/db/
