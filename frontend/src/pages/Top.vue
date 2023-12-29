@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import Headder from '@/components/Headder.vue';
-import Carousel from '@/components/Carousel.vue';
-
+import Headder from "@/components/Headder.vue";
+import Carousel from "@/components/Carousel.vue";
 </script>
 
 <template>
