@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import axios from 'axios';
+import axios from "axios";
 
 interface Item {
   title: string;
@@ -9,18 +9,16 @@ interface Item {
 }
 
 const items = ref<Item[]>([]);
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 // APIからデータを取得
-const fetchData =async () => {
+const fetchData = async () => {
   try {
-    const response = await axios.get<Item[]>(BACKEND_URL + '/items');
-    console.log("レスポンスデータ:" + response.data)
-    console.log("スライス後:" + response.data.slice(0,3))
-    items.value = response.data.slice(0,3);
+    const response = await axios.get<Item[]>(BACKEND_URL + "/items");
+    items.value = response.data.slice(0, 3);
   } catch (error) {
-    console.error('URL:',BACKEND_URL)
-    console.error('データ取得でエラーが出ました。エラー内容:',error)
+    console.error("URL:", BACKEND_URL);
+    console.error("データ取得でエラーが出ました。エラー内容:", error);
   }
 };
 
@@ -32,13 +30,25 @@ onMounted(() => {
 
 <template>
   <div>
-    <h1>Items</h1>
-    <v-carousel>
-      <v-carousel-item v-for="item in items"
+    <v-carousel v-if="items.length" height="auto" color="black">
+      <v-carousel-item
+        v-for="item in items"
         :key="item.title"
         :src="item.image_url"
-        cover>
+        max-width="1280"
+        max-height="720"
+        eager
+        cover
+      >
       </v-carousel-item>
     </v-carousel>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.v-carousel-item {
+  display: flex;
+  justify-content: center;
+  background-color: #757575;
+}
+</style>
