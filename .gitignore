@@ -10,6 +10,7 @@ node_modules
 dist
 .env.*
 sys/
+.ash_history
 
 /.bundle
 
@@ -34,3 +35,4 @@ sys/
 /tmp/storage/*
 !/tmp/storage/
 !/tmp/storage/.keep
+!backend/db/

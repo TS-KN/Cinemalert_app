@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue'
-import OtherComponent from '@/components/OtherComponent.vue'
-
+import Headder from "@/components/Headder.vue";
+import Carousel from "@/components/Carousel.vue";
 </script>
 
 <template>
-  <span>Topページの予定です</span>
-  <HelloWorld />
-  <OtherComponent />
+  <v-app>
+    <Headder />
+    <v-main>
+      <Carousel />
+    </v-main>
+  </v-app>
 </template>
-
-<style scoped>
-</style>
